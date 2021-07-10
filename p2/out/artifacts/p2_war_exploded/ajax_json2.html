@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Học Ajax</title>
+    <script>
+        $(document).ready(function () {
+           /* $("#idbtn01").click(function (){
+                $.getJSON("array_json2.html", function(result){
+                    var i=0;
+                    for(i=0;i<result.employees.length;i++){
+                        var strrow="<tr><td>";
+                        $.each(result.employees[i], function(j, field){
+                            strrow+=field+"</td><td>";
+                        });
+                        strrow+="</td></tr>";
+                        $("#idrowhead").after(strrow);
+                    }
+                }).fail(function(jqXHR, textStatus, errorThrown) { console.log('getJSON request failed! ' + textStatus); });
+            });*/
+
+            $("#idbtn01").click(function () {
+                $.getJSON("array_json2.html", function (result) {
+                        var i = 0;
+                    for (let j = 0; j < result.employees.length; j++) {
+                        var trRow = "<tr><td>";
+                        $.each(result.employees[i], function (j,field) {
+                            trRow += field+"</td><td>"
+                        });
+                        trRow += "</td></tr>";
+                        $("#idrowhead").after(trRow);
+                    }
+
+                })
+            })
+        });
+        /*
+        https://www.w3schools.com/jquery/demo_ajax_json.js
+        {
+          "firstName": "John",
+          "lastName": "Doe",
+          "age": 25
+        }
+        */
+    </script>
+</head>
+<body>
+<h2>hello</h2>
+<table>
+    <tr id="idrowhead"><th>First name</th><th>Last name</th></tr>
+
+</table>
+<input type="button" id="idbtn01" value="Get data">
+</body>
+</html>

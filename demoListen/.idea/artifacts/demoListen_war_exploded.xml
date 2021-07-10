@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="demoListen:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/demoListen_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="demoListen/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="demoListen" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="D:/AppCoding/jstl-1.2.jar" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.2.1" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.21" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
