@@ -153,7 +153,7 @@ public class UsermySQLDB {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection(urlDb,username,password);
-            PreparedStatement preparedStatement = connection.prepareStatement("select u.*, r.role from user as u inner join userrole as ur on u.userId = ur.uid inner join role as r on r.role_id = ur.rid where u.userId = ?");
+            PreparedStatement preparedStatement = connection.prepareStatement("select u.*, r.role from user as u inner join userrole as ur on u.userId = ur.uid inner join role as r on r.role_id = ur.rid where u.userId = ?", 3,4);
             preparedStatement.setInt(1, id);
             ResultSet  rs = preparedStatement.executeQuery();
             while (rs.next()) {
@@ -166,6 +166,7 @@ public class UsermySQLDB {
                         );
                 System.out.println(users);
             }
+
 
             rs.close();
             connection.close();
